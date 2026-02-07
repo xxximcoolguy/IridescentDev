@@ -1,7 +1,7 @@
 {
-  "name": "claude-code-ui",
+  "name": "iridescent-code",
   "version": "1.0.0",
-  "description": "Claude Code 可视化桌面助手",
+  "description": "Iridescent Code - 流光代码，AI 编程可视化助手",
   "main": "./out/main/index.js",
   "author": "",
   "license": "MIT",

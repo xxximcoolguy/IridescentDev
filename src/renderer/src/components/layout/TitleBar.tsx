@@ -31,7 +31,7 @@ export function TitleBar(): JSX.Element {
       {/* 左侧：应用图标 + 标题 */}
       <div className="title-bar-left">
         <span className="title-bar-icon">{'>'}_</span>
-        <span className="title-bar-title">Claude Code UI</span>
+        <span className="title-bar-title">Iridescent Code</span>
       </div>
 
       {/* 中间：工作目录路径 */}

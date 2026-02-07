@@ -62,7 +62,7 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
-  electronApp.setAppUserModelId('com.claude-code-ui')
+  electronApp.setAppUserModelId('com.iridescent-code')
 
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)

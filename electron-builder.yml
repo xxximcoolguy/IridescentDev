@@ -1,5 +1,5 @@
-appId: com.claude-code-ui.app
-productName: Claude Code UI
+appId: com.iridescent-code.app
+productName: Iridescent Code
 directories:
   buildResources: resources
 files:
@@ -12,7 +12,7 @@ win:
   target:
     - nsis
     - portable
-  executableName: claude-code-ui
+  executableName: iridescent-code
   sign: false
 nsis:
   artifactName: ${name}-${version}-setup.${ext}

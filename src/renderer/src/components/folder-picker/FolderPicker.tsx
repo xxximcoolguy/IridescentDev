@@ -30,9 +30,9 @@ export function FolderPicker(): JSX.Element {
     <div className="folder-picker">
       <div className="folder-picker-content">
         <div className="logo-section">
-          <div className="logo-icon">Claude</div>
-          <h1 className="logo-title">Claude Code UI</h1>
-          <p className="logo-subtitle">Visual Assistant for Claude Code</p>
+          <div className="logo-icon">IC</div>
+          <h1 className="logo-title">Iridescent Code</h1>
+          <p className="logo-subtitle">流光代码 - AI 编程可视化助手</p>
         </div>
 
         <button className="select-folder-btn" onClick={handleSelectFolder}>

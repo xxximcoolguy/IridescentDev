@@ -1,6 +1,6 @@
-# Claude Code UI (Windows)
+# Iridescent Code (流光代码)
 
-Windows 桌面端的 Claude Code 可视化助手，替代命令行终端使用 Claude Code CLI。
+Windows 桌面端的 AI 编程可视化助手，替代命令行终端使用 Claude Code CLI。
 
 提供聊天对话、终端模拟、文件浏览、代码编辑等功能，让你通过图形界面与 Claude Code 交互。
 
@@ -10,8 +10,8 @@ Windows 桌面端的 Claude Code 可视化助手，替代命令行终端使用 C
 
 | 文件 | 说明 |
 |------|------|
-| `claude-code-ui-x.x.x-setup.exe` | **安装版**（推荐）— 安装到电脑，创建桌面快捷方式，支持卸载 |
-| `claude-code-ui-x.x.x-portable.exe` | **便携版** — 双击直接运行，无需安装 |
+| `iridescent-code-x.x.x-setup.exe` | **安装版**（推荐）— 安装到电脑，创建桌面快捷方式，支持卸载 |
+| `iridescent-code-x.x.x-portable.exe` | **便携版** — 双击直接运行，无需安装 |
 
 ## 使用前提（重要）
 
