@@ -13,6 +13,7 @@ win:
     - nsis
     - portable
   executableName: iridescent-code
+  icon: resources/icon.ico
   sign: false
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
@@ -21,5 +22,7 @@ nsis:
   createDesktopShortcut: always
   oneClick: false
   allowToChangeInstallationDirectory: true
+  installerIcon: resources/icon.ico
+  uninstallerIcon: resources/icon.ico
 portable:
   artifactName: ${name}-${version}-portable.${ext}
