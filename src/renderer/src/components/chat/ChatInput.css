@@ -63,3 +63,22 @@
   opacity: 0.35;
   cursor: not-allowed;
 }
+
+.chat-input-stop {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  background: #ff453a;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.chat-input-stop:hover {
+  background: #ff6961;
+}

@@ -60,7 +60,7 @@ export class ClaudeProcess {
     // 如果已有进程在运行，先终止
     this.abort()
 
-    const args = ['-p', '--output-format', 'stream-json', '--verbose']
+    const args = ['-p', '--output-format', 'stream-json', '--verbose', '--dangerously-skip-permissions']
 
     // 如果有 sessionId，添加 --resume 参数恢复会话
     if (this.sessionId) {

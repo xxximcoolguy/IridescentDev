@@ -3,10 +3,11 @@ import './ChatInput.css'
 
 interface ChatInputProps {
   onSend: (content: string) => void
+  onStop?: () => void
   disabled?: boolean
 }
 
-export function ChatInput({ onSend, disabled }: ChatInputProps): JSX.Element {
+export function ChatInput({ onSend, onStop, disabled }: ChatInputProps): JSX.Element {
   const [text, setText] = useState('')
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -49,23 +50,35 @@ export function ChatInput({ onSend, disabled }: ChatInputProps): JSX.Element {
           disabled={disabled}
           rows={1}
         />
-        <button
-          className="chat-input-send"
-          onClick={handleSend}
-          disabled={disabled || !text.trim()}
-          title="发送 (Ctrl+Enter)"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+        {disabled && onStop ? (
+          <button
+            className="chat-input-stop"
+            onClick={onStop}
+            title="停止回复"
           >
-            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-          </svg>
-        </button>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="6" width="12" height="12" rx="2" />
+            </svg>
+          </button>
+        ) : (
+          <button
+            className="chat-input-send"
+            onClick={handleSend}
+            disabled={disabled || !text.trim()}
+            title="发送 (Ctrl+Enter)"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   )
