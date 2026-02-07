@@ -11,9 +11,15 @@ files:
 win:
   target:
     - nsis
+    - portable
   executableName: claude-code-ui
+  sign: false
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+portable:
+  artifactName: ${name}-${version}-portable.${ext}
