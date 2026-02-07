@@ -1,0 +1,186 @@
+.message {
+  display: flex;
+  max-width: 70%;
+  animation: messageIn 0.2s ease-out;
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-user {
+  align-self: flex-end;
+}
+
+.message-assistant {
+  align-self: flex-start;
+}
+
+.message-text {
+  padding: 10px 14px;
+  line-height: 1.5;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* 用户消息：蓝色气泡，右对齐，iMessage 风格圆角 */
+.message-user .message-text {
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 18px 18px 6px 18px;
+}
+
+/* 助手消息：灰色气泡，左对齐，iMessage 风格圆角 */
+.message-assistant .message-text {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 18px 18px 18px 6px;
+}
+
+/* 用户消息内 p 标签 */
+.message-user .message-text p {
+  margin: 0;
+}
+
+/* ===== Markdown 样式（助手消息） ===== */
+
+.message-assistant .message-text p {
+  margin: 0 0 8px;
+}
+
+.message-assistant .message-text p:last-child {
+  margin-bottom: 0;
+}
+
+.message-assistant .message-text pre {
+  background: var(--bg-primary);
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.message-assistant .message-text code {
+  font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', monospace;
+  font-size: 13px;
+}
+
+.message-assistant .message-text :not(pre) > code {
+  background: var(--bg-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.message-assistant .message-text ul,
+.message-assistant .message-text ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.message-assistant .message-text li {
+  margin: 4px 0;
+}
+
+.message-assistant .message-text blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  margin: 8px 0;
+  color: var(--text-secondary);
+}
+
+.message-assistant .message-text a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.message-assistant .message-text a:hover {
+  text-decoration: underline;
+}
+
+.message-assistant .message-text table {
+  border-collapse: collapse;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.message-assistant .message-text th,
+.message-assistant .message-text td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.message-assistant .message-text th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+}
+
+/* ===== 流式光标：蓝色脉动小圆点 ===== */
+
+.streaming-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+/* ===== 等待回复：三点跳动动画 ===== */
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 0;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  animation: typingBounce 1.4s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}

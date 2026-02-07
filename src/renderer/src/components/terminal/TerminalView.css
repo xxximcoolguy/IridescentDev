@@ -1,0 +1,32 @@
+.terminal-view {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  padding: 8px;
+  overflow: hidden;
+}
+
+.terminal-view .xterm {
+  height: 100%;
+}
+
+.terminal-view .xterm-viewport {
+  overflow-y: auto;
+}
+
+.terminal-view .xterm-viewport::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-view .xterm-viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-view .xterm-viewport::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated);
+  border-radius: 2px;
+}
+
+.terminal-view .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
